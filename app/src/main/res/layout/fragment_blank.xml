@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlankFragment"
+    android:background="@drawable/gradient">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewCityName"
+            android:layout_width="152dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="40dp"
+            android:gravity="clip_horizontal|center_horizontal"
+            android:text="City name"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewTemperature"
+            android:layout_width="183dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            android:text="Temperature"
+            android:textColor="#FFFFFF"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCityName" />
+
+        <TextView
+            android:id="@+id/textViewFeelsLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="70dp"
+            android:text="Feels like"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDescription" />
+
+        <TextView
+            android:id="@+id/textViewTempMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temp min"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewFeelsLike"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFeelsLike" />
+
+        <TextView
+            android:id="@+id/textViewTempMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temp max"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewTempMin"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTempMin" />
+
+        <TextView
+            android:id="@+id/textViewPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pressure"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewTempMax"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTempMax" />
+
+        <TextView
+            android:id="@+id/textViewHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Humidity"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewPressure"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPressure" />
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Descryption"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTemperature" />
+
+        <TextView
+            android:id="@+id/textViewFeelsLikeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="150dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDescription" />
+
+        <TextView
+            android:id="@+id/textViewTempMinValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewFeelsLikeValue"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFeelsLikeValue" />
+
+        <TextView
+            android:id="@+id/textViewTempMaxValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewTempMinValue"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTempMinValue" />
+
+        <TextView
+            android:id="@+id/textViewPressureValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewTempMaxValue"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTempMaxValue" />
+
+        <TextView
+            android:id="@+id/textViewHumidityValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewPressureValue"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPressureValue" />
+
+        <ImageButton
+            android:id="@+id/refreshButton"
+            android:layout_width="118dp"
+            android:layout_height="101dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#0000"
+            android:contentDescription="refreshData"
+            android:src="@android:drawable/stat_notify_sync_noanim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
