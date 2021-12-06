@@ -4,8 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Admin/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/gradient.xml" value="0.2703125" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_blank.xml" value="0.264" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_first_list_of_cities.xml" value="0.2" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_item.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_item_list.xml" value="0.264" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_list_of_cities.xml" value="0.19444444444444445" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_second_city_info.xml" value="0.264" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_third_add_city.xml" value="0.2" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/one_city_item.xml" value="0.21693840579710144" />
       </map>
     </option>
   </component>

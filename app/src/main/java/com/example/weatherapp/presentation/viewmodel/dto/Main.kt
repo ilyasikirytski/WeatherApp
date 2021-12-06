@@ -1,7 +1,6 @@
-package com.example.weatherapp.pojo
+package com.example.weatherapp.presentation.viewmodel.dto
 
 import com.google.gson.annotations.Expose
-
 import com.google.gson.annotations.SerializedName
 
 data class Main(

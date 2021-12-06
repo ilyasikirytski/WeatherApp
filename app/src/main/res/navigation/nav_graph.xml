@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstFragmentListOfCities">
+    <fragment
+        android:id="@+id/firstFragmentListOfCities"
+        android:name="com.example.weatherapp.presentation.fragments.FirstFragmentListOfCities"
+        android:label="fragment_list_of_cities"
+        tools:layout="@layout/fragment_first_list_of_cities">
+        <action
+            android:id="@+id/action_firstFragmentListOfCities_to_secondFragmentCityInfo"
+            app:destination="@id/secondFragmentCityInfo">
+            <argument
+                android:name="city"
+                android:defaultValue="null" />
+        </action>
+        <argument
+            android:name="city"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_firstFragmentListOfCities_to_thirdFragmentAddCity"
+            app:destination="@id/thirdFragmentAddCity" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragmentCityInfo"
+        android:name="com.example.weatherapp.presentation.fragments.SecondFragmentCityInfo"
+        android:label="fragment_second_city_info"
+        tools:layout="@layout/fragment_second_city_info">
+        <argument
+            android:name="city"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_secondFragmentCityInfo_to_firstFragmentListOfCities"
+            app:destination="@id/firstFragmentListOfCities" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragmentAddCity"
+        android:name="com.example.weatherapp.presentation.fragments.ThirdFragmentAddCity"
+        android:label="fragment_third_add_city"
+        tools:layout="@layout/fragment_third_add_city">
+        <action
+            android:id="@+id/action_thirdFragmentAddCity_to_firstFragmentListOfCities"
+            app:destination="@id/firstFragmentListOfCities" />
+    </fragment>
+</navigation>

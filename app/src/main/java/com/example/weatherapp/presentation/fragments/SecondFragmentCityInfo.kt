@@ -1,42 +1,30 @@
-package com.example.weatherapp
+package com.example.weatherapp.presentation.fragments
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.core.view.isVisible
-import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import com.example.weatherapp.api.ApiFactory
-import com.example.weatherapp.databinding.FragmentBlankBinding
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.schedulers.Schedulers
-import okhttp3.*
-import java.io.IOException
+import com.example.weatherapp.presentation.viewmodel.WeatherViewModel
+import com.example.weatherapp.databinding.FragmentSecondCityInfoBinding
 
-class BlankFragment : Fragment() {
-    private val liveData: WeatherViewModel by viewModels()
-    lateinit var binding: FragmentBlankBinding
+class SecondFragmentCityInfo : Fragment() {
+    private val viewModel: WeatherViewModel by viewModels()
+    lateinit var binding: FragmentSecondCityInfoBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentBlankBinding.inflate(inflater)
-        binding.progressBar.visibility = View.VISIBLE
+        binding = FragmentSecondCityInfoBinding.inflate(inflater)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        liveData.weatherInfo.observe(viewLifecycleOwner) { it ->
+        viewModel.weatherInfo.observe(viewLifecycleOwner) { it ->
             binding.textViewCityName.text = it.name
             binding.textViewDescription.text = it.weather?.joinToString { it.description.toString() }
             binding.textViewTemperature.text = it.main?.temp.toString()
@@ -48,17 +36,22 @@ class BlankFragment : Fragment() {
             binding.progressBar.visibility = View.INVISIBLE
         }
 
-        liveData.loadData()
+        viewModel.latitude = arguments?.getString("latitude")
+        viewModel.longitude = arguments?.getString("longitude")
+        viewModel.cityName = arguments?.getString("key")
+        viewModel.loadData()
+
 
         binding.refreshButton.setOnClickListener {
             binding.progressBar.visibility = View.VISIBLE
-            liveData.loadData()
+            viewModel.loadData()
             binding.progressBar.visibility = View.INVISIBLE
         }
     }
 
     companion object {
         @JvmStatic
-        fun newInstance() = BlankFragment()
+        fun newInstance() = SecondFragmentCityInfo()
     }
 }
+

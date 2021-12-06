@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BlankFragment"
+    tools:context=".presentation.fragments.SecondFragmentCityInfo"
     android:background="@drawable/gradient">
 
     <!-- TODO: Update blank fragment layout -->
@@ -16,8 +16,8 @@
 
         <TextView
             android:id="@+id/textViewCityName"
-            android:layout_width="152dp"
-            android:layout_height="47dp"
+            android:layout_width="358dp"
+            android:layout_height="0dp"
             android:layout_marginTop="40dp"
             android:gravity="clip_horizontal|center_horizontal"
             android:text="City name"
@@ -31,7 +31,7 @@
             android:id="@+id/textViewTemperature"
             android:layout_width="183dp"
             android:layout_height="95dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="36dp"
             android:gravity="center_horizontal"
             android:text="Temperature"
             android:textColor="#FFFFFF"
@@ -155,10 +155,10 @@
 
         <ImageButton
             android:id="@+id/refreshButton"
-            android:layout_width="118dp"
-            android:layout_height="101dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="52dp"
+            android:layout_height="53dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="48dp"
             android:backgroundTint="#0000"
             android:contentDescription="refreshData"
             android:src="@android:drawable/stat_notify_sync_noanim"
@@ -170,7 +170,7 @@
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
