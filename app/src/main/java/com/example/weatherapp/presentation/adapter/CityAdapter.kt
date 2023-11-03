@@ -8,7 +8,7 @@ import com.example.weatherapp.data.Cities
 import com.example.weatherapp.databinding.OneCityItemBinding
 
 class CityAdapter(private val context: Context?) : RecyclerView.Adapter<CityAdapter.CityViewHolder>() {
-
+ 
     var cityItemList: List<Cities> = listOf()
         set(value) {
             field = value
